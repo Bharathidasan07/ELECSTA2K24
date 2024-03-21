@@ -34,23 +34,44 @@ header{
         justify-content: space-between;
         align-items: center;
         padding: 10px 30px;
-       
-        
-    }
-    #headul{
-        display: none;
+           
     }
 }
 
 #baricon{
+    cursor: pointer;
     display: none;
 }
 
+
 @media screen and (max-width: 700px) {
-    #baricon{
-        display: contents;
-        font-size: larger;
+    header{
+        flex-direction: column;
+        height: auto;
     }
+    #headul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    #headul li{
+        padding: 10px;
+    }
+    #title{
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+    #baricon{
+        display: block;
+        position: absolute;
+        right: 20px
+    }
+    .showmenu{
+        display: block;
+    }
+
+    
 }
 
 #title{
