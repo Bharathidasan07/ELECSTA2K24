@@ -11,10 +11,10 @@
     <header>
         <h1 id="title">ELECSTA*2K24</h1>
         <ul class="showmenu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#cabt">About</a></li>
-            <li><a href="#cent">Events</a></li>
-            <li><a href="#cc">Contact</a></li>
+            <li><a href="#home" id="li_home">Home</a></li>
+            <li><a href="#cabt" id="li_about">About</a></li>
+            <li><a href="#cent" id="li_events">Events</a></li>
+            <li><a href="#cc" id="li_contact">Contact</a></li>
         </ul>
         <i class="fa fa-solid fa fa-bars" id="baricon"></i>
     </header>
@@ -99,11 +99,11 @@
         <div id="stcor">
            
             <div class="pos">
-                <p><b>Secretary:</b></p>
+                <p class="pos_title"><b>Secretary:</b></p>
                 <p class="coordinators">Bhuvaneshwaran D T - 9994530135</p>
             </div>
             <div class="pos">
-                <p><b>Student Coordinators:</b></p>
+                <p class="pos_title"><b>Student Coordinators:</b></p>
                 <p class="coordinators">
                 Srinivasan S - 8610076995
                 </p>
@@ -127,12 +127,24 @@
 </body>
 <script>
     const menu = document.querySelector('#baricon')
-    const home = document.querySelector('#cc')
+    const home = document.querySelector('#li_home')
+    const about = document.querySelector('#li_about')
+    const events = document.querySelector('#li_events')
+    const contact = document.querySelector('#li_contact')
     const menulist = document.querySelector('header ul')
     menu.addEventListener('click',()=>{
         menulist.classList.toggle('showmenu')
     })
-    cc.addEventListener('click',()=>{
+    home.addEventListener('click',()=>{
+        menulist.classList.toggle('showmenu')
+    })
+    about.addEventListener('click',()=>{
+        menulist.classList.toggle('showmenu')
+    })
+    events.addEventListener('click',()=>{
+        menulist.classList.toggle('showmenu')
+    })
+    contact.addEventListener('click',()=>{
         menulist.classList.toggle('showmenu')
     })
 </script>
